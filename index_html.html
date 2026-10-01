@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><base href="https://d16ilfvy4mv02r.cloudfront.net/workspaces/UoEouGQWbpTFOGyIO5mjPJzxvWXuyNZL/bd55f04a-993f-4c4b-9eaf-f13b1f335519/files/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARCOR, Doce é o Amor</title>
+<meta name="description" content="Apresentação institucional Arcor do Brasil: exposição Paçoca do Amor, Poosh! Seu Espaço Radical e 7 Belo.">
+<link rel="icon" type="image/png" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKunhGC96AwPdKHHGrPiybirHI91QIGow5X_XxkmATag&s=10">
+<link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKunhGC96AwPdKHHGrPiybirHI91QIGow5X_XxkmATag&s=10">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a0a0a;
+    --paper:#f7f6f3;
+    --white:#ffffff;
+    --grey-1:#1a1a1a;
+    --grey-2:#4a4a4a;
+    --grey-3:#8a8a8a;
+    --grey-4:#d6d4cf;
+    --line:rgba(10,10,10,.14);
+    --line-dark:rgba(255,255,255,.16);
+    --serif:'Instrument Serif', 'Times New Roman', serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--ink);color:var(--paper)}
+  img{display:block;max-width:100%}
+
+  /* ---------- grain + grid texture ---------- */
+  .grain{
+    position:fixed;inset:0;pointer-events:none;z-index:9998;opacity:.035;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  /* ---------- nav ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:1000;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:18px 40px;
+    transition:background .5s var(--ease), padding .5s var(--ease), border-color .5s;
+    border-bottom:1px solid transparent;
+  }
+  header.solid{
+    background:rgba(247,246,243,.82);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+    padding:12px 40px;
+  }
+  .logo{
+    font-family:var(--serif);font-size:26px;letter-spacing:.01em;
+    text-decoration:none;color:var(--ink);display:flex;align-items:baseline;gap:8px;
+  }
+  .logo small{font-family:var(--sans);font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--grey-3)}
+  nav ul{list-style:none;display:flex;gap:30px}
+  nav a{
+    font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--grey-2);
+    text-decoration:none;position:relative;padding-bottom:3px;transition:color .3s;
+  }
+  nav a::after{
+    content:'';position:absolute;left:0;bottom:0;height:1px;width:0;background:var(--ink);transition:width .4s var(--ease);
+  }
+  nav a:hover{color:var(--ink)}
+  nav a:hover::after{width:100%}
+  .burger{display:none;background:none;border:0;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+  .burger span{width:22px;height:1.5px;background:var(--ink);display:block}
+
+  /* ---------- hero ---------- */
+  .hero{
+    min-height:100svh;display:flex;flex-direction:column;justify-content:center;
+    padding:150px 40px 60px;position:relative;
+  }
+  .eyebrow{
+    font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--grey-3);
+    display:flex;align-items:center;gap:14px;margin-bottom:26px;
+  }
+  .eyebrow::before{content:'';width:52px;height:1px;background:var(--grey-4)}
+  .hero h1{
+    font-family:var(--serif);font-weight:400;line-height:.9;letter-spacing:-.02em;
+    font-size:clamp(64px, 15vw, 220px);
+  }
+  .hero h1 em{font-style:italic;color:var(--grey-3)}
+  .hero-sub{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:end;
+    margin-top:48px;padding-top:34px;border-top:1px solid var(--line);
+  }
+  .hero-sub p{font-size:16px;max-width:44ch;color:var(--grey-2);font-weight:300}
+  .hero-meta{display:flex;gap:44px;flex-wrap:wrap}
+  .hero-meta div{border-left:1px solid var(--line);padding-left:14px}
+  .hero-meta b{display:block;font-family:var(--serif);font-size:30px;font-weight:400;line-height:1}
+  .hero-meta span{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey-3)}
+
+  /* ---------- marquee ---------- */
+  .marquee{
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    overflow:hidden;white-space:nowrap;padding:20px 0;background:var(--white);
+  }
+  .marquee-track{display:inline-flex;gap:0;animation:slide 34s linear infinite}
+  .marquee span{
+    font-family:var(--serif);font-size:38px;padding:0 30px;color:var(--ink);
+    display:inline-flex;align-items:center;gap:30px;
+  }
+  .marquee span::after{content:'✦';font-size:16px;color:var(--grey-4)}
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ---------- sections ---------- */
+  section{padding:110px 40px}
+  .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;flex-wrap:wrap;margin-bottom:64px}
+  .section-head h2{
+    font-family:var(--serif);font-weight:400;font-size:clamp(38px,6vw,76px);line-height:1;letter-spacing:-.02em;
+  }
+  .section-head h2 em{font-style:italic;color:var(--grey-3)}
+  .section-head .idx{font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--grey-3)}
+
+  /* ---------- brand rows ---------- */
+  .brand{
+    display:grid;grid-template-columns:1fr 1fr;gap:0;
+    border-top:1px solid var(--line);padding:0;align-items:stretch;
+  }
+  .brand:last-of-type{border-bottom:1px solid var(--line)}
+  .brand-media{
+    position:relative;overflow:hidden;background:var(--ink);min-height:520px;
+  }
+  .brand-media img{
+    width:100%;height:100%;object-fit:cover;
+    filter:grayscale(1) contrast(1.06);
+    transform:scale(1.02);
+    transition:filter 1s var(--ease), transform 1.4s var(--ease);
+  }
+  .brand-media:hover img{filter:grayscale(0) contrast(1);transform:scale(1.07)}
+  .brand-media .tag{
+    position:absolute;top:22px;left:22px;z-index:2;
+    background:var(--paper);color:var(--ink);font-size:9px;letter-spacing:.24em;text-transform:uppercase;
+    padding:8px 13px;border:1px solid var(--ink);
+  }
+  .brand-media::after{
+    content:'Ver em cores';position:absolute;bottom:22px;right:22px;z-index:2;
+    font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--white);
+    background:rgba(10,10,10,.55);border:1px solid rgba(255,255,255,.35);padding:8px 13px;
+    backdrop-filter:blur(6px);transition:opacity .5s;
+  }
+  .brand-media:hover::after{opacity:0}
+  .brand-copy{padding:70px 60px;display:flex;flex-direction:column;justify-content:center;background:var(--white)}
+  .brand.reverse .brand-media{order:2}
+  .brand-copy .num{font-family:var(--serif);font-size:15px;color:var(--grey-3);margin-bottom:18px;font-style:italic}
+  .brand-copy h3{font-family:var(--serif);font-weight:400;font-size:clamp(34px,4.4vw,58px);line-height:1;letter-spacing:-.02em;margin-bottom:22px}
+  .brand-copy p{color:var(--grey-2);font-weight:300;font-size:15.5px;max-width:46ch;margin-bottom:18px}
+  .specs{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:26px}
+  .specs li{background:var(--white);padding:16px 18px}
+  .specs b{display:block;font-family:var(--serif);font-size:21px;font-weight:400;line-height:1.15}
+  .specs span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--grey-3)}
+
+  /* ---------- dark band ---------- */
+  .dark{background:var(--ink);color:var(--paper)}
+  .dark .section-head h2 em{color:var(--grey-3)}
+  .dark .section-head .idx{color:var(--grey-3)}
+  .dark .brand{border-color:var(--line-dark)}
+  .dark .brand:last-of-type{border-color:var(--line-dark)}
+  .dark .brand-copy{background:var(--grey-1)}
+  .dark .brand-copy p{color:#b8b6b1}
+  .dark .specs{background:var(--line-dark);border-color:var(--line-dark)}
+  .dark .specs li{background:var(--grey-1)}
+  .dark .specs span{color:var(--grey-3)}
+  .dark .brand-media .tag{background:var(--ink);color:var(--paper);border-color:var(--paper)}
+
+  /* ---------- exposition announcement ---------- */
+  .expo-announcement{
+    min-height:clamp(320px,55vh,620px);display:grid;place-items:center;
+    border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center;
+  }
+  .expo-announcement h2{
+    font-family:var(--serif);font-weight:400;font-size:clamp(48px,10vw,140px);
+    line-height:.95;text-transform:uppercase;
+  }
+
+  /* ---------- resumo / build notes ---------- */
+  .resumo{background:var(--paper)}
+  .resumo-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px 70px}
+  .resumo-item{border-top:1px solid var(--ink);padding-top:22px}
+  .resumo-item h4{font-family:var(--serif);font-weight:400;font-size:27px;margin-bottom:10px;line-height:1.15}
+  .resumo-item p{font-size:14.5px;color:var(--grey-2);font-weight:300}
+  .stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+  .stack span{
+    font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+    border:1px solid var(--line);padding:7px 12px;color:var(--grey-2);border-radius:100px;background:var(--white);
+  }
+
+  /* ---------- footer ---------- */
+  footer{background:var(--ink);color:var(--paper);padding:90px 40px 40px}
+  .foot-top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:50px;padding-bottom:60px;border-bottom:1px solid var(--line-dark)}
+  .foot-top h5{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--grey-3);margin-bottom:16px}
+  .foot-top a{display:block;color:#cfcdc8;text-decoration:none;font-size:14px;padding:5px 0;transition:color .3s}
+  .foot-top a:hover{color:var(--white)}
+  .foot-brand{font-family:var(--serif);font-size:clamp(40px,7vw,92px);line-height:1;letter-spacing:-.02em}
+  .foot-brand em{font-style:italic;color:var(--grey-3)}
+  .foot-bot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:26px;font-size:11px;color:var(--grey-3);letter-spacing:.08em}
+
+  /* ---------- reveal ---------- */
+  .rv{opacity:0;transform:translateY(28px);transition:opacity 1s var(--ease), transform 1.1s var(--ease)}
+  .rv.in{opacity:1;transform:none}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:1000px){
+    header{padding:16px 22px}
+    header.solid{padding:12px 22px}
+    nav ul{display:none;position:fixed;top:0;right:0;height:100svh;width:min(78vw,340px);background:var(--ink);
+      flex-direction:column;gap:6px;padding:100px 34px;transform:translateX(100%);transition:transform .55s var(--ease)}
+    nav ul.open{transform:none}
+    nav ul a{color:var(--paper);font-size:14px;letter-spacing:.1em;padding:12px 0;border-bottom:1px solid var(--line-dark)}
+    .burger{display:flex;z-index:1002}
+    .burger.x span{background:var(--paper)}
+    .hero{padding:130px 22px 50px}
+    .hero-sub{grid-template-columns:1fr;gap:34px}
+    section{padding:80px 22px}
+    .brand{grid-template-columns:1fr}
+    .brand-media{min-height:340px}
+    .brand.reverse .brand-media{order:0}
+    .brand-copy{padding:44px 26px}
+    .resumo-grid{grid-template-columns:1fr;gap:38px}
+    .foot-top{grid-template-columns:1fr;gap:34px}
+    footer{padding:70px 22px 30px}
+  }
+</style>
+</head>
+<body>
+<div class="grain"></div>
+
+<!-- ============ NAV ============ -->
+<header id="hdr">
+  <a class="logo" href="#top">Arcor <small>Brasil</small></a>
+  <nav>
+    <ul id="menu">
+      <li><a href="#expo">Exposição</a></li>
+      <li><a href="#pacoca">Paçoca do Amor</a></li>
+      <li><a href="#setebelo">7 Belo</a></li>
+      <li><a href="#poosh">Poosh!</a></li>
+      <li><a href="#resumo">Sobre o site</a></li>
+    </ul>
+  </nav>
+  <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+</header>
+
+<!-- ============ HERO ============ -->
+<div class="hero" id="top">
+  <div class="eyebrow rv">Arcor do Brasil · Apresentação institucional</div>
+  <h1 class="rv">Doce é<br><em>o amor.</em></h1>
+  <div class="hero-sub">
+    <p class="rv">Três marcas que atravessam gerações — <strong>Paçoca do Amor</strong>, <strong>7 Belo</strong> e <strong>Poosh!</strong> — reunidas em uma exposição preto e branco sobre memória, sabor e imaginação.</p>
+    <div class="hero-meta rv">
+      <div><b>03</b><span>Marcas em foco</span></div>
+      <div><b>1976</b><span>Arcor no Brasil*</span></div>
+      <div><b>∞</b><span>Infância lembrada</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Paçoca do Amor</span><span>7 Belo</span><span>Poosh!</span><span>Arcor</span><span>Vila Doce de Natal</span><span>Seu Espaço Radical</span>
+    <span>Paçoca do Amor</span><span>7 Belo</span><span>Poosh!</span><span>Arcor</span><span>Vila Doce de Natal</span><span>Seu Espaço Radical</span>
+  </div>
+</div>
+
+<!-- ============ EXPOSIÇÃO ============ -->
+<section id="expo">
+  <div class="expo-announcement rv">
+    <h2>EXPOGRAFIA</h2>
+  </div>
+</section>
+
+<!-- ============ PAÇOCA DO AMOR ============ -->
+<section id="pacoca" style="padding-top:0">
+  <div class="brand rv">
+    <div class="brand-media">
+      <span class="tag">Coleção 01</span>
+      <img src="pacoca-do-amor.jpg" alt="Estande Paçoca do Amor">
+    </div>
+    <div class="brand-copy">
+      <div class="num">— nº 01</div>
+      <h3>Paçoca<br>do Amor</h3>
+      <p>O clássico de amendoim ganha escala monumental: um coração inteiro construído paçoca por paçoca, sob uma coroa de luz dourada. É a marca do afeto simples — o doce que se divide ao meio e se entrega.</p>
+      <p>Na expografia, madeira clara, vidro e iluminação quente traduzem a ideia de <em>feito à mão</em>, enquanto o coração central funciona como ponto de encontro e foto obrigatória.</p>
+      <ul class="specs">
+        <li><b>Coração</b><span>Escultura comestível</span></li>
+        <li><b>Amendoim</b><span>Sabor original</span></li>
+        <li><b>Afeto</b><span>Território de marca</span></li>
+        <li><b>Vitrine</b><span>Ilha central</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7 BELO (dark) ============ -->
+<section class="dark" id="setebelo">
+  <div class="section-head rv">
+    <h2>7 Belo <em>/ a carta na manga</em></h2>
+    <div class="idx">02 — Ícone lúdico</div>
+  </div>
+  <div class="brand rv">
+    <div class="brand-media">
+      <span class="tag">Coleção 02</span>
+      <img src="7-belo.jpg" alt="Estande 7 Belo">
+    </div>
+    <div class="brand-copy">
+      <div class="num">— nº 02</div>
+      <h3>7 Belo</h3>
+      <p>A bala mastigável que virou personagem. No estande, a carta de baralho ganha corpo, sorriso e braços abertos para receber o público — cercada de pirulitos, ursinhos de goma e um donut gigante.</p>
+      <p>É a marca da brincadeira pura: cor em estado bruto, transformada aqui em um exercício de design onde o preto e branco do site deixa toda a energia para a imagem.</p>
+      <ul class="specs">
+        <li><b>Mastigável</b><span>Textura macia</span></li>
+        <li><b>Tutti-frutti</b><span>Mix de frutas</span></li>
+        <li><b>Personagem</b><span>Mascote-carta</span></li>
+        <li><b>Playground</b><span>Território de marca</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POOSH ============ -->
+<section id="poosh">
+  <div class="section-head rv">
+    <h2>Poosh! <em>/ espaço radical</em></h2>
+    <div class="idx">03 — Imersão</div>
+  </div>
+  <div class="brand reverse rv">
+    <div class="brand-media">
+      <span class="tag">Coleção 03</span>
+      <img src="poosh.jpg" alt="Espaço imersivo Poosh">
+    </div>
+    <div class="brand-copy">
+      <div class="num">— nº 03</div>
+      <h3>Poosh!</h3>
+      <p>A poeira efervescente que explode na boca vira ambiente: um quarto de gelo com cama suspensa, projeções de doces no teto e dispensers coloridos nas paredes. A marca deixa de ser sabor e passa a ser <em>experiência</em>.</p>
+      <p>O espaço "Vila Doce de Natal" combina neve cenográfica, árvore decorada e trilha sensorial — o ponto mais instagramável da exposição.</p>
+      <ul class="specs">
+        <li><b>Efervescente</b><span>Sensação radical</span></li>
+        <li><b>Imersivo</b><span>Sala 360°</span></li>
+        <li><b>Dispenser</b><span>Parede de sabores</span></li>
+        <li><b>Radical</b><span>Território de marca</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESUMO ============ -->
+<section class="resumo" id="resumo">
+  <div class="section-head rv">
+    <h2>Sobre o site <em></em></h2>
+    <div class="idx">04 — Notas de projeto</div>
+  </div>
+  <div class="resumo-grid">
+    <div class="resumo-item rv">
+      <h4>Para que foi criado</h4>
+      <p>Este site foi desenvolvido para apresentar a Arcor, sua história, valores e presença no mercado. Através de uma linguagem clara e visual atrativa, o objetivo é informar o público sobre a empresa, seus produtos e sua atuação no setor de alimentos. Aqui, os visitantes podem conhecer melhor a marca, sua identidade e os diferenciais que fortalecem sua relevância no mercado.</p>
+    </div>
+    
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="foot-top">
+    <div>
+      <div class="foot-brand">Arcor<em>.</em></div>
+    </div>
+    <div>
+      <h5>Marcas em foco</h5>
+      <a href="#pacoca">Paçoca do Amor</a>
+      <a href="#setebelo">7 Belo</a>
+      <a href="#poosh">Poosh! — Seu Espaço Radical</a>
+    </div>
+    <div>
+      <h5>Exposição</h5>
+      <a href="#expo">Expografia</a>
+      <a href="#resumo">Notas de projeto</a>
+      <a href="#top">Voltar ao topo ↑</a>
+    </div>
+  </div>
+  <div class="foot-bot">
+    <span>© <span id="yr"></span> — Site de apresentação conceitual · Projeto visual não oficial</span>
+    <span>Preto &amp; Branco · Tipografia editorial</span>
+  </div>
+</footer>
+
+<script>
+  /* nav solid on scroll */
+  const hdr = document.getElementById('hdr');
+  const onScroll = () => hdr.classList.toggle('solid', window.scrollY > 40);
+  onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+
+  /* mobile menu */
+  const burger = document.getElementById('burger');
+  const menu = document.getElementById('menu');
+  burger.addEventListener('click', () => {
+    menu.classList.toggle('open');
+    burger.classList.toggle('x');
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    menu.classList.remove('open'); burger.classList.remove('x');
+  }));
+
+  /* reveal on scroll */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('in'), i * 90);
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:.12, rootMargin:'0px 0px -8% 0px'});
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+  /* year */
+  document.getElementById('yr').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
